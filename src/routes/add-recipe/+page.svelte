@@ -1,7 +1,9 @@
 <script lang="ts">
+	import Checkbox from '$lib/components/checkbox.svelte'
 	import Input from '$lib/components/input.svelte'
 
 	let recipeName: string
+	let isPublic: boolean = false
 	let ingredients = [{ name: '', amount: '', unit: '' }]
 
 	const addIngredient = () => {
@@ -20,6 +22,7 @@
 	{#each ingredients as ingredient, i}
 		<div>
 			<Input size="sm" label="Name" name={`name-${i}`} bind:value={ingredients[i].name} required />
+			<Checkbox label="Make recipe public" bind:checked={isPublic} />
 			<Input
 				size="sm"
 				label="Amount"
@@ -37,5 +40,7 @@
 </form>
 
 <pre>
+    {JSON.stringify(recipeName, null, 2)}
+    {JSON.stringify(isPublic, null, 2)}
     {JSON.stringify(ingredients, null, 2)}
 </pre>
