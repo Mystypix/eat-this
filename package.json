@@ -2,6 +2,9 @@
 	"name": "eat-this",
 	"version": "0.0.1",
 	"private": true,
+	"prisma": {
+		"seed": "pnpx vite-node prisma/seed.ts"
+	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -38,6 +41,8 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@prisma/client": "^4.11.0",
+		"backendless": "^6.6.5",
 		"pocketbase": "^0.12.0"
 	}
 }

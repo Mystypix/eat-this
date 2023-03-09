@@ -1,5 +1,5 @@
 <script>
-	import '../app.css';
+	import '../app.css'
 </script>
 
 <nav class="navbar bg-primary">
@@ -7,6 +7,6 @@
 	<a href="/sign-in-and-sign-up">Sign in and sign up</a>
 </nav>
 
-<div class="container">
+<div class="container p-5">
 	<slot />
 </div>
